@@ -303,7 +303,8 @@ let pty={};try{pty=JSON.parse(localStorage.getItem('pamur2pty')||'{}')}catch(e){
 const ptySave=()=>{try{localStorage.setItem('pamur2pty',JSON.stringify(pty))}catch(e){}};
 let mob={};try{mob=JSON.parse(localStorage.getItem('pamur2mob')||'{}')}catch(e){}
 const mobSave=()=>{try{localStorage.setItem('pamur2mob',JSON.stringify(mob))}catch(e){}};
-let cst={};try{cst=JSON.parse(localStorage.getItem('pamur2cst')||'{}')}catch(e){}
+const CSEED2={"929":"Muslim","949":"Muslim","1096":"Muslim","1117":"Muslim","1129":"Muslim","1140":"Muslim","1143":"Muslim","1200":"Muslim","1203":"Muslim","1213":"Muslim","1233":"Muslim","1310":"Muslim","1353":"Muslim","1358":"Muslim","1435":"Muslim","1456":"Muslim","1490":"Muslim","1492":"Muslim","1501":"Muslim","1572":"Muslim","1781":"Muslim"};
+let cst=Object.assign({},CSEED2);try{cst=Object.assign(cst,JSON.parse(localStorage.getItem('pamur2cst')||'{}'))}catch(e){}
 let lmk={};try{lmk=JSON.parse(localStorage.getItem('pamur2lmk')||'{}')}catch(e){}
 const cstSave=()=>{try{localStorage.setItem('pamur2cst',JSON.stringify(cst))}catch(e){}};
 const lmkSave=()=>{try{localStorage.setItem('pamur2lmk',JSON.stringify(lmk))}catch(e){}};
